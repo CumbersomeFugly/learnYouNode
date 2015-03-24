@@ -3,7 +3,7 @@ var fs = require('fs'),
     finalList = [];
 
 module.exports = function (directoryName, extension, innerCallback) {
-    fs.readdir(process.argv[2], function (err, list) {
+    fs.readdir(directoryName, function (err, list) {
 	    if(err) {console.log("Testing12321");
                      return innerCallback(err, []);}
 

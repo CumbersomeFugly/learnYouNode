@@ -1,4 +1,7 @@
-var fileLister = require('./learnYouNode06Module.js');
+var fileLister = require('./learnYouNode06Module.js'),
+    fs = require('fs'),
+    path = require('path');
+;
 
 var callback = function(err, finalList) {
     if (err) {return console.log(err);}
