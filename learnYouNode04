@@ -1,0 +1,16 @@
+var fs = require('fs');
+var realData;
+var splitLines = [];
+
+var callback = function (err, data) {
+    if(err) {console.log("Error!");}
+    else {
+        realData = data.toString();
+        splitLines = realData.split('\n');
+        console.log(splitLines.length - 1);
+    }
+}
+
+fs.readFile(process.argv[2], callback);
+
+
