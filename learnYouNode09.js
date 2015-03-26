@@ -1,13 +1,12 @@
 var http = require('http'),
-    receivedCharacters = [],
-    index = 0,
+    receivedCharacters = ["","",""],
     runningCount = 0;
 
 var callback = function(index, response) {
     response.setEncoding('utf8');
 
     response.on("data", function (data) {
-            receivedCharacters[index] += data;
+            receivedCharacters[index]+=data;
     });
     
     response.on("error", function (error) {
